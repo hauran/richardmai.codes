@@ -1,0 +1,21 @@
+@import "./mixins";
+
+#header {
+  width:100%;
+  .displayFlex;
+  .alignCenter;
+  .flexDirection(column);
+  .title {
+    letter-spacing: 10px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+  }
+  .subtitle {
+    margin-top:1em;
+    font-size: 0.8em;
+    text-transform: uppercase;
+  }
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}

@@ -1,0 +1,35 @@
+@import "./mixins";
+
+body {
+    font-size: 16px;
+    font-family: "Open Sans", "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    padding:0;
+    margin:0;
+    background: #f7f7f7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color:#333333;
+}
+
+ul, li, p, section, footer, table, tbody, tfooter {
+margin: 0; padding:0;
+}
+
+ul {
+  list-style: none;
+}
+
+.view-container {
+  .displayFlex;
+  .alignCenter;
+  .flexDirection(column);
+  padding:10px;
+  section.content {
+    width:100%;
+    max-width: 1050px;
+    .displayFlex;
+    .alignCenter;
+    .flexDirection(column);
+  }
+}
