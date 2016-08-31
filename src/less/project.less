@@ -1,0 +1,63 @@
+@import "./mixins";
+
+.project {
+  width:100%;
+  .displayFlex;
+  .flexDirection(row);
+  .text {
+    .flexRatio(0.6);
+    .title, .description {
+      font-family: 'Open Sans';
+      letter-spacing: -0.02em;
+      font-size: 1.2em;
+      color:#333333;
+      font-weight: 200;
+    }
+    .description {
+      font-size: 0.9em;
+      letter-spacing: initial;
+      color:#666666;
+      margin:0.75em 0;
+
+    }
+  }
+  .img {
+    .alignCenter;
+    .flexRatio(0.4);
+    align-content: flex-end;
+    -webkit-align-content: flex-end;
+    text-align: right;
+    img {
+      max-width: 350px;
+    }
+  }
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+
+
+  @media only screen and (max-width:799px) {
+    .flexDirection(column);
+    .description {
+      margin-bottom: 0.5em;
+    }
+  }
+
+  @media only screen and (min-width: 351px) and (max-width:799px) {
+    .img {
+      .displayFlex;
+      .justifyCenter;
+    }
+  }
+
+  @media only screen and (max-width:350px) {
+    .img {
+      display: block;
+      img {
+        max-width:100%;
+      }
+    }
+  }
+
+
+
+}
