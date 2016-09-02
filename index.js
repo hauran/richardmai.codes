@@ -29445,6 +29445,10 @@
 
 	var _Header2 = _interopRequireDefault(_Header);
 
+	var _Project = __webpack_require__(279);
+
+	var _Project2 = _interopRequireDefault(_Project);
+
 	__webpack_require__(273);
 
 	function _interopRequireDefault(obj) {
@@ -29469,6 +29473,10 @@
 	  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
 	}
 
+	var dd_ios = __webpack_require__(282);
+	var dd_osx = __webpack_require__(283);
+	var om = __webpack_require__(284);
+
 	var Portfolio = function (_React$Component) {
 	  _inherits(Portfolio, _React$Component);
 
@@ -29477,14 +29485,44 @@
 
 	    var _this = _possibleConstructorReturn(this, (Portfolio.__proto__ || Object.getPrototypeOf(Portfolio)).call(this, props));
 
-	    _this.state = {};
+	    _this.state = {
+	      projects: [{
+	        title: 'Discover on Demand',
+	        platform: ['iOS'],
+	        description: 'An on-demand music recommendation app, specically tailored to each user.',
+	        img: dd_ios,
+	        release_date: 'May 5, 2016'
+	      }, {
+	        title: 'Discover on Demand',
+	        platform: ['osx'],
+	        description: 'An on-demand music recommendation app, specically tailored to each user.',
+	        img: dd_osx,
+	        release_date: 'Jan 20, 2016'
+	      }, {
+	        title: 'OurMix',
+	        platform: ['iOS, Android'],
+	        img: om,
+	        press: [{
+	          publication: 'techcrunch',
+	          url: 'https://techcrunch.com/2016/01/15/ourmix-is-social-music-discovery-done-right/'
+	        }]
+	      }, {
+	        title: 'Offline',
+	        platform: ['iOS']
+	      }, {
+	        title: 'Everyone\'s Mixtape',
+	        platform: ['web']
+	      }]
+	    };
 	    return _this;
 	  }
 
 	  _createClass(Portfolio, [{
 	    key: 'render',
 	    value: function render() {
-	      return React.createElement('div', { className: 'view-container' }, React.createElement('section', { className: 'content' }, React.createElement(_Header2.default, null)));
+	      return React.createElement('div', { className: 'view-container' }, React.createElement('section', { className: 'content' }, React.createElement(_Header2.default, null), React.createElement('ul', null, this.state.projects.map(function (p, i) {
+	        return React.createElement('li', { key: i }, React.createElement(_Project2.default, { project: p }));
+	      }))));
 	    }
 	  }]);
 
@@ -29556,7 +29594,7 @@
 
 
 	// module
-	exports.push([module.id, ".dropShadow {\n  -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.35);\n  -moz-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.35);\n  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.35);\n}\n.flex {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  display: -webkit-flex;\n  -webkit-justify-content: center;\n  -webkit-align-items: center;\n}\n.displayFlex {\n  display: flex;\n  display: -webkit-flex;\n}\n.alignCenter {\n  -webkit-align-items: center;\n  align-items: center;\n}\n.justifyCenter {\n  -webkit-justify-content: center;\n  justify-content: center;\n}\n.flex1 {\n  flex: 1;\n  -webkit-flex: 1;\n}\n.fixed00 {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}\nbody {\n  font-size: 16px;\n  font-family: \"Open Sans\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  font-weight: 400;\n  padding: 0;\n  margin: 0;\n  background: #f7f7f7;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  color: #333333;\n}\nul,\nli,\np,\nsection,\nfooter,\ntable,\ntbody,\ntfooter {\n  margin: 0;\n  padding: 0;\n}\nul {\n  list-style: none;\n}\n.view-container {\n  display: flex;\n  display: -webkit-flex;\n  -webkit-align-items: center;\n  align-items: center;\n  flex-direction: column;\n  -webkit-flex-direction: column;\n  padding: 10px;\n}\n.view-container section.content {\n  width: 100%;\n  max-width: 1050px;\n  display: flex;\n  display: -webkit-flex;\n  -webkit-align-items: center;\n  align-items: center;\n  flex-direction: column;\n  -webkit-flex-direction: column;\n}\n", ""]);
+	exports.push([module.id, ".dropShadow {\n  -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.35);\n  -moz-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.35);\n  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.35);\n}\n.flex {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  display: -webkit-flex;\n  -webkit-justify-content: center;\n  -webkit-align-items: center;\n}\n.displayFlex {\n  display: flex;\n  display: -webkit-flex;\n}\n.alignCenter {\n  -webkit-align-items: center;\n  align-items: center;\n}\n.justifyCenter {\n  -webkit-justify-content: center;\n  justify-content: center;\n}\n.flex1 {\n  flex: 1;\n  -webkit-flex: 1;\n}\n.fixed00 {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}\nbody {\n  font-size: 16px;\n  font-family: \"Open Sans\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n  font-weight: 400;\n  padding: 0;\n  margin: 0;\n  background: #fafafa;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  color: #333333;\n}\nul,\nli,\np,\nsection,\nfooter,\ntable,\ntbody,\ntfooter {\n  margin: 0;\n  padding: 0;\n}\nul {\n  list-style: none;\n  width: 100%;\n}\nul li {\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n}\nimg {\n  max-width: 100%;\n}\n.view-container {\n  display: flex;\n  display: -webkit-flex;\n  -webkit-align-items: center;\n  align-items: center;\n  flex-direction: column;\n  -webkit-flex-direction: column;\n  padding: 10px;\n}\n.view-container section.content {\n  width: 100%;\n  max-width: 1024px;\n  display: flex;\n  display: -webkit-flex;\n  -webkit-align-items: center;\n  align-items: center;\n  flex-direction: column;\n  -webkit-flex-direction: column;\n}\n", ""]);
 
 	// exports
 
@@ -29904,10 +29942,92 @@
 
 
 	// module
-	exports.push([module.id, ".dropShadow {\n  -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.35);\n  -moz-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.35);\n  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.35);\n}\n.flex {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  display: -webkit-flex;\n  -webkit-justify-content: center;\n  -webkit-align-items: center;\n}\n.displayFlex {\n  display: flex;\n  display: -webkit-flex;\n}\n.alignCenter {\n  -webkit-align-items: center;\n  align-items: center;\n}\n.justifyCenter {\n  -webkit-justify-content: center;\n  justify-content: center;\n}\n.flex1 {\n  flex: 1;\n  -webkit-flex: 1;\n}\n.fixed00 {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}\n#header {\n  width: 100%;\n  display: flex;\n  display: -webkit-flex;\n  -webkit-align-items: center;\n  align-items: center;\n  flex-direction: column;\n  -webkit-flex-direction: column;\n  padding-top: 1.5em;\n  padding-bottom: 1.5em;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n}\n#header .title {\n  letter-spacing: 10px;\n  font-size: 1.5em;\n  text-transform: uppercase;\n}\n#header .subtitle {\n  margin-top: 1em;\n  font-size: 0.8em;\n  text-transform: uppercase;\n}\n", ""]);
+	exports.push([module.id, ".dropShadow {\n  -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.35);\n  -moz-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.35);\n  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.35);\n}\n.flex {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  display: -webkit-flex;\n  -webkit-justify-content: center;\n  -webkit-align-items: center;\n}\n.displayFlex {\n  display: flex;\n  display: -webkit-flex;\n}\n.alignCenter {\n  -webkit-align-items: center;\n  align-items: center;\n}\n.justifyCenter {\n  -webkit-justify-content: center;\n  justify-content: center;\n}\n.flex1 {\n  flex: 1;\n  -webkit-flex: 1;\n}\n.fixed00 {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}\n#header {\n  width: 100%;\n  display: flex;\n  display: -webkit-flex;\n  -webkit-align-items: center;\n  align-items: center;\n  flex-direction: column;\n  -webkit-flex-direction: column;\n  padding-top: 1.5em;\n  padding-bottom: 1.5em;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n}\n#header .title {\n  font-family: 'Montserrat';\n  letter-spacing: 10px;\n  font-size: 1.5em;\n  text-transform: uppercase;\n}\n#header .subtitle {\n  font-family: 'Montserrat';\n  margin-top: 1em;\n  font-size: 0.8em;\n  text-transform: uppercase;\n  font-weight: 100;\n}\n", ""]);
 
 	// exports
 
+
+/***/ },
+/* 279 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(React) {/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/rmai/gitrepo/richardmai.codes/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/rmai/gitrepo/richardmai.codes/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	__webpack_require__(273);
+
+	__webpack_require__(280);
+
+	var Project = function Project(p) {
+	  return React.createElement('div', { className: 'project' }, React.createElement('div', { className: 'text' }, React.createElement('div', { className: 'title' }, p.project.title), React.createElement('div', { className: 'description' }, p.project.description)), React.createElement('div', { className: 'img' }, React.createElement('img', { src: p.project.img })));
+	};
+	exports.default = Project;
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (false) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/rmai/gitrepo/richardmai.codes/node_modules/react-hot-loader/makeExportsHot.js"); if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "Project.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ },
+/* 280 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(281);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(276)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/less-loader/index.js!./project.less", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/less-loader/index.js!./project.less");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 281 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(275)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".dropShadow {\n  -webkit-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.35);\n  -moz-box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.35);\n  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.35);\n}\n.flex {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  display: -webkit-flex;\n  -webkit-justify-content: center;\n  -webkit-align-items: center;\n}\n.displayFlex {\n  display: flex;\n  display: -webkit-flex;\n}\n.alignCenter {\n  -webkit-align-items: center;\n  align-items: center;\n}\n.justifyCenter {\n  -webkit-justify-content: center;\n  justify-content: center;\n}\n.flex1 {\n  flex: 1;\n  -webkit-flex: 1;\n}\n.fixed00 {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n}\n.project {\n  width: 100%;\n  display: flex;\n  display: -webkit-flex;\n  flex-direction: row;\n  -webkit-flex-direction: row;\n  padding-top: 1.5em;\n  padding-bottom: 1.5em;\n}\n.project .text {\n  flex: 0.6;\n  -webkit-flex: 0.6;\n}\n.project .text .title,\n.project .text .description {\n  font-family: 'Open Sans';\n  letter-spacing: -0.02em;\n  font-size: 1.2em;\n  color: #333333;\n  font-weight: 200;\n}\n.project .text .description {\n  font-size: 0.9em;\n  letter-spacing: initial;\n  color: #666666;\n  margin: 0.75em 0;\n}\n.project .img {\n  -webkit-align-items: center;\n  align-items: center;\n  flex: 0.4;\n  -webkit-flex: 0.4;\n  align-content: flex-end;\n  -webkit-align-content: flex-end;\n  text-align: right;\n}\n.project .img img {\n  max-width: 350px;\n}\n@media only screen and (max-width: 799px) {\n  .project {\n    flex-direction: column;\n    -webkit-flex-direction: column;\n  }\n  .project .description {\n    margin-bottom: 0.5em;\n  }\n}\n@media only screen and (min-width: 351px) and (max-width: 799px) {\n  .project .img {\n    display: flex;\n    display: -webkit-flex;\n    -webkit-justify-content: center;\n    justify-content: center;\n  }\n}\n@media only screen and (max-width: 350px) {\n  .project .img {\n    display: block;\n  }\n  .project .img img {\n    max-width: 100%;\n  }\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 282 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "fd16f00e5bd59a4166fbe7239bfcd679.png";
+
+/***/ },
+/* 283 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "69324971c57c888823f88316619e4b9e.png";
+
+/***/ },
+/* 284 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "a22445cf12f749e57509c5423a336e51.png";
 
 /***/ }
 /******/ ]);

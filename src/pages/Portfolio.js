@@ -6,10 +6,10 @@ import Project from '../components/Project'
 
 import '../less/app.less'
 
-const dd_ios = require('../assets/dd_ios.png');
-const dd_osx = require('../assets/dd_osx.png');
-const om = require('../assets/OM.png');
-
+const dd_ios  = require('../assets/dd_ios.png');
+const dd_osx  = require('../assets/dd_osx.png');
+const om      = require('../assets/OM.png');
+const offline = require('../assets/offline_search.png');
 
 class Portfolio extends React.Component {
   constructor(props) {
@@ -33,6 +33,7 @@ class Portfolio extends React.Component {
         {
           title:'OurMix',
           platform: ['iOS, Android'],
+          description:'Music discovery powered by your friends',
           img:om,
           press:[{
             publication:'techcrunch',
@@ -41,7 +42,8 @@ class Portfolio extends React.Component {
         },
         {
           title:'Offline',
-          platform: ['iOS']
+          platform: ['iOS'],
+          img:offline,
         },
         {
           title:'Everyone\'s Mixtape',
