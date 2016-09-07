@@ -10,6 +10,7 @@ const dd_ios  = require('../assets/dd_ios.png');
 const dd_osx  = require('../assets/dd_osx.png');
 const om      = require('../assets/OM.png');
 const offline = require('../assets/offline_search.png');
+const emt = require('../assets/emt.png');
 
 class Portfolio extends React.Component {
   constructor(props) {
@@ -47,7 +48,8 @@ class Portfolio extends React.Component {
         },
         {
           title:'Everyone\'s Mixtape',
-          platform: ['web']
+          platform: ['web'],
+          img:emt
         }
       ]
     }

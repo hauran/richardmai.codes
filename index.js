@@ -29476,6 +29476,7 @@
 	var dd_ios = __webpack_require__(282);
 	var dd_osx = __webpack_require__(283);
 	var om = __webpack_require__(284);
+	var offline = __webpack_require__(285);
 
 	var Portfolio = function (_React$Component) {
 	  _inherits(Portfolio, _React$Component);
@@ -29501,6 +29502,7 @@
 	      }, {
 	        title: 'OurMix',
 	        platform: ['iOS, Android'],
+	        description: 'Music discovery powered by your friends',
 	        img: om,
 	        press: [{
 	          publication: 'techcrunch',
@@ -29508,7 +29510,8 @@
 	        }]
 	      }, {
 	        title: 'Offline',
-	        platform: ['iOS']
+	        platform: ['iOS'],
+	        img: offline
 	      }, {
 	        title: 'Everyone\'s Mixtape',
 	        platform: ['web']
@@ -30021,13 +30024,19 @@
 /* 283 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "69324971c57c888823f88316619e4b9e.png";
+	module.exports = __webpack_require__.p + "afbff656f6c28b0bd422f424c699ad7e.png";
 
 /***/ },
 /* 284 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "a22445cf12f749e57509c5423a336e51.png";
+
+/***/ },
+/* 285 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "721ef901ed4705d867f31b0c751b086c.png";
 
 /***/ }
 /******/ ]);
