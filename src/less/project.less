@@ -6,20 +6,62 @@
   .flexDirection(row);
   .text {
     .flexRatio(0.6);
-    .title, .description {
+    .displayFlex;
+    .flexDirection(column);
+    .top {
+      .flex1;
+    }
+    .title-date {
+      .displayFlex;
+      .flexDirection(row);
+    }
+    .title, .description, .date {
       font-family: 'Open Sans';
       letter-spacing: -0.02em;
-      font-size: 1.2em;
+      font-size: 1.3em;
+      line-height: 1.2em;
       color:#333333;
       font-weight: 200;
+    }
+    .title {
+      font-family: 'Montserrat';
+      font-weight:200;
+      color:#555555;
+    }
+    .date {
+      .flex1;
+      font-size: 0.9em;
+      color:#666666;
+      margin-left:1.2em;
+      margin-top: auto;
     }
     .description {
       font-size: 0.9em;
       letter-spacing: initial;
       color:#666666;
       margin:0.75em 0;
-
     }
+    .links {
+      margin-top:30px;
+      .displayFlex;
+      .flexDirection(column);
+      .ios {
+        width: 140px
+      }
+    }
+    ul {
+      margin-top:25px;
+      margin-bottom: 15px;
+      li {
+        border-bottom: initial;
+        display: inline-block;
+        margin-right:12px;
+        font-size: 0.9em;
+        font-family: 'Montserrat';
+        color:#666666;
+      }
+    }
+
   }
   .img {
     .alignCenter;
@@ -27,6 +69,7 @@
     align-content: flex-end;
     -webkit-align-content: flex-end;
     text-align: right;
+    margin-left: 10px;
     img {
       max-width: 350px;
     }
@@ -40,8 +83,18 @@
     .description {
       margin-bottom: 0.5em;
     }
+    .links {
+      .flex;
+    }
+    ul {
+      margin-top: 15px;
+    }
+    .img {
+      margin-left: initial;
+      margin-top:20px;
+      margin-bottom:20px;
+    }
   }
-
   @media only screen and (min-width: 351px) and (max-width:799px) {
     .img {
       .displayFlex;

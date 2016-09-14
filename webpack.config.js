@@ -2,10 +2,6 @@
 const webpack = require('webpack')
 const WebpackStripLoader = require('strip-loader')
 
-const envs = {
-  EPIQUERY_ROOT:  JSON.stringify(process.env.EPIQUERY_ROOT || 'https://services-internal.glgresearch.com/epiquery'),
-}
-
 let config = {
   entry:'./src/main.js',
   output:{
@@ -39,24 +35,23 @@ let config = {
         test: /\.less$/,
         loader: 'style!css!less'
       },
-      {test: /\.(jpe?g|png|gif|svg)$/i, loader: 'url?limit=8192!img?progressive=true' }, //inline data url under 8k, converts to jpg and gifs to progressive
+      {
+        test: /react-icons\/(.)*(.js)$/,
+        loader: 'babel',
+        query: {
+          presets:['es2015', 'react', 'stage-2']
+        }
+      },
+      {test: /\.(jpe?g|png|gif)$/i, loader: 'url?limit=8192!img?progressive=true' }, //inline data url under 8k, converts to jpg and gifs to progressive
       {test: /\.woff(2)?(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=8192&mimetype=application/font-woff" },
       {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=8192&mimetype=application/octet-stream" },
       {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file" },
-      {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=8192&mimetype=image/svg+xml" },
+      {test: /\.svg$/, loader: 'svg-inline' }
     ]
   },
   plugins: [
-    new webpack.DefinePlugin(envs),
-    new webpack.ProvidePlugin({
-        React: "react"
-    })
+    new webpack.ProvidePlugin({React: "react"})
   ]
-}
-
-if(process.env.NODE_ENV=='production'){
-  console.log('PRODUCTION ENV')
-  config.devtool = 'source-map'
 }
 
 
