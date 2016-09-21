@@ -25,10 +25,12 @@ class Portfolio extends React.Component {
             web:'http://discoverondemand.com',
           },
           description:'An on-demand music recommendation app, specically tailored to each user.',
-          story:'There wasn\'t a simple way to find new music whenever I wanted.  Yea there\'s Spotify\'s Discover Weekly, which I love, but by Wednesday, I already listened to the whole thing. So I made one.  Plus it was a great way to play with React Native.  I reused a lot of the same back end code as OurMix, so the development was pretty fast. This app is actually my go-to for new music. Give it a shot.',
+          story:'There wasn\'t a simple way to find new music whenever I wanted.  Yea there\'s Spotify\'s Discover Weekly, which I love, but by Wednesday, I already listened to the whole thing. So I made one.  Plus it was a great way to play with React Native.  I reused a lot of the same back end code as OurMix, so the development was pretty fast. This app is actually my go-devto for new music. Give it a shot.',
           img:dd_ios,
           release_date:'May 2016',
-          stack:['React Native', 'Objective-C', 'Node.js', 'MySQL', 'Redis', 'Spotify SDK', 'Spotify API']
+          stack:['React Native', 'Objective-C', 'Node.js', 'MySQL', 'Redis', 'Spotify SDK', 'Spotify API'],
+          'background-color':'rgba(146, 180, 180, 1)',
+          fontcolor:'dark'
         },
         {
           title:'Discover on Demand',
@@ -38,7 +40,9 @@ class Portfolio extends React.Component {
           story:'Desktop app',
           img:dd_osx,
           release_date:'Feb 2016',
-          stack:['Riot.js', 'Electron', 'AppleScript', 'Node.js', 'MySQL', 'Redis', 'Spotify API' ]
+          stack:['Riot.js', 'Electron', 'AppleScript', 'Node.js', 'MySQL', 'Redis', 'Spotify API' ],
+          'background-color':'rgba(255, 94, 82, 1)',
+          fontcolor:'light'
         },
         {
           title:'OurMix',
@@ -51,7 +55,8 @@ class Portfolio extends React.Component {
             publication:'techcrunch',
             url:'https://techcrunch.com/2016/01/15/ourmix-is-social-music-discovery-done-right/'
           }],
-          stack:['AngularJS', 'Objective-C', 'Java', 'Node.js', 'MySQL', 'Redis', 'Spotify SDK', 'Spotify API']
+          stack:['AngularJS', 'Objective-C', 'Java', 'Node.js', 'MySQL', 'Redis', 'Spotify SDK', 'Spotify API'],
+          'background-color':'rgba(255, 255, 255, 1)'
         },
         {
           title:'Offline',
@@ -63,7 +68,8 @@ class Portfolio extends React.Component {
           press:[{
             url:'https://www.elegran.com/blog/2014/03/finding-hidden-gems-in-nyc-theres-an-app-for-that'
           }],
-          stack:['AngularJS', 'Node.js', 'MySQL', 'MongoDB', 'NYC MTA data', 'Yelp API', 'Google Maps API']
+          stack:['AngularJS', 'Node.js', 'MySQL', 'MongoDB', 'NYC MTA data', 'Yelp API', 'Google Maps API'],
+          'background-color':'rgba(255, 255, 255, 1)'
         },
         {
           title:'Everyone\'s Mixtape',
@@ -86,7 +92,8 @@ class Portfolio extends React.Component {
               url:'http://lifehacker.com/5870202/everyones-mixtape-is-a-socially-curated-playlist-creator'
             }
           ],
-          stack:['jQuery', 'PHP', 'MySQL']
+          stack:['jQuery', 'PHP', 'MySQL'],
+          'background-color':'rgba(255, 255, 255, 1)'
         }
       ]
     }

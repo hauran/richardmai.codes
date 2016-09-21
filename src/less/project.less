@@ -1,9 +1,16 @@
 @import "./mixins";
 
 .project {
-  width:100%;
   .displayFlex;
-  .flexDirection(row);
+  .justifyCenter;
+  width: 100vw;
+  .project-details {
+    max-width: 1024px;
+    width: 100%;
+    .displayFlex;
+    .flexDirection(row);
+    padding:15px;
+  }
   .text {
     .flexRatio(0.6);
     .displayFlex;
@@ -22,6 +29,9 @@
       line-height: 1.2em;
       color:#333333;
       font-weight: 200;
+    }
+    .story {
+      color:#333333;
     }
     .title {
       font-family: 'Montserrat';
@@ -77,9 +87,10 @@
   padding-top: 1.5em;
   padding-bottom: 1.5em;
 
-
   @media only screen and (max-width:799px) {
-    .flexDirection(column);
+    .project-details {
+      .flexDirection(column);
+    }
     .description {
       margin-bottom: 0.5em;
     }
@@ -111,6 +122,14 @@
     }
   }
 
+  &.light .text {
+    .title, .story {
+      color:#ffffff;
+    }
+    .date, .description, ul li {
+      color:#efefef;
+    }
+  }
 
 
 }
