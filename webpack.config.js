@@ -2,6 +2,12 @@
 const webpack = require('webpack')
 const WebpackStripLoader = require('strip-loader')
 
+const projects = require('./src/data/project.js')
+
+const projectData = {
+  PROJECTS:JSON.stringify(projects)
+}
+
 let config = {
   entry:'./src/main.js',
   output:{
@@ -46,11 +52,12 @@ let config = {
       {test: /\.woff(2)?(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=8192&mimetype=application/font-woff" },
       {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=8192&mimetype=application/octet-stream" },
       {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file" },
-      {test: /\.svg$/, loader: 'svg-inline' }
+      {test: /\.svg$/, loader: 'svg-inline' },
+      {test: /\.json/,  loader: 'json'}
     ]
   },
   plugins: [
-    new webpack.ProvidePlugin({React: "react"})
+    new webpack.ProvidePlugin({React: "react"}), new webpack.DefinePlugin(projectData)
   ]
 }
 

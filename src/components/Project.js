@@ -6,7 +6,6 @@ import LinkIcon from 'react-icons/io/link'
 import classNames from 'classnames'
 
 const Project = (p) => {
-  console.log(p.project['background-color']);
   let project = classNames('project', p.project.fontcolor);
   return (
     <div className={project} style={{'background-color':p.project['background-color']}}>
