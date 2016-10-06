@@ -1,20 +1,26 @@
 @import "./mixins";
 
 .project {
-  .displayFlex;
-  .justifyCenter;
+  .flex;
+  .flexDirection(column);
   width: 100vw;
+  .line {
+    border-top:1px solid #ddd;
+    margin-bottom:1em;
+    margin-top:1em;
+  }
   .project-details {
     max-width: 1024px;
     width: 100%;
     .displayFlex;
     .flexDirection(row);
-    padding:15px;
+    padding:30px;
   }
   .text {
     .flexRatio(0.6);
     .displayFlex;
     .flexDirection(column);
+    padding:0 10px;
     .top {
       .flex1;
     }
@@ -62,7 +68,7 @@
     ul {
       margin-top:25px;
       margin-bottom: 15px;
-      li {
+        li {
         border-bottom: initial;
         display: inline-block;
         margin-right:12px;
@@ -74,20 +80,18 @@
 
   }
   .img {
+    .flex;
     .alignCenter;
-    .flexRatio(0.4);
-    align-content: flex-end;
-    -webkit-align-content: flex-end;
-    text-align: right;
-    margin-left: 10px;
+    margin-top:50px;
     img {
       max-width: 350px;
     }
   }
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
 
-  @media only screen and (max-width:799px) {
+  // @media only screen and (max-width:799px) {
+    .line {
+      width:75vw;
+    }
     .project-details {
       .flexDirection(column);
     }
@@ -100,36 +104,27 @@
     ul {
       margin-top: 15px;
     }
-    .img {
-      margin-left: initial;
-      margin-top:20px;
-      margin-bottom:20px;
-    }
-  }
-  @media only screen and (min-width: 351px) and (max-width:799px) {
-    .img {
-      .displayFlex;
-      .justifyCenter;
-    }
-  }
+  // }
 
-  @media only screen and (max-width:350px) {
-    .img {
-      display: block;
-      img {
-        max-width:100%;
-      }
-    }
-  }
-
-  &.light .text {
-    .title, .story {
-      color:#ffffff;
-    }
-    .date, .description, ul li {
-      color:#efefef;
-    }
-  }
-
-
+  // @media only screen and (min-width: 351px) and (max-width:799px) {
+  //   .img {
+  //     .displayFlex;
+  //     .justifyCenter;
+  //   }
+  // }
+  //
+  // @media only screen and (max-width:350px) {
+  //   .img {
+  //     display: block;
+  //     img {
+  //       max-width:100%;
+  //     }
+  //   }
+  // }
+  //
+  // @media only screen and (min-width:800px) {
+  //   .line {
+  //     width:65vw;
+  //   }
+  // }
 }

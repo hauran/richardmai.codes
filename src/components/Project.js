@@ -8,7 +8,8 @@ import classNames from 'classnames'
 const Project = (p) => {
   let project = classNames('project', p.project.fontcolor);
   return (
-    <div className={project} style={{'background-color':p.project['background-color']}}>
+    <div className={project} style={{'backgroundColor':p.project['backgroundColor']}}>
+      <div className='line'></div>
       <div className='project-details'>
         <div className='text'>
           <div className='top'>
