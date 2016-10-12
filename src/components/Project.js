@@ -29,13 +29,13 @@ const Project = (p) => {
             <div className='links'>
               {
                 p.project.links.appstore ?
-                  <div className={iosLink}><IosIcon size={25} className='iosIcon'></IosIcon><a href={p.project.links.appstore} target='_blank'>AppStore</a></div>
+                  <div className={iosLink}><IosIcon size={25} className='iosIcon'></IosIcon><a href={p.project.links.appstore} target='_blank' className='link'>AppStore</a></div>
                 :
                   null
               }
               {
                 p.project.links.web ?
-                  <div className='link'><LinkIcon size={15}></LinkIcon> <a href={weblink} target='_blank'>{p.project.links.web}</a></div>
+                  <div className='link'><LinkIcon size={15}></LinkIcon> <a href={weblink} target='_blank' className='link'>{p.project.links.web}</a></div>
                 :
                   null
               }

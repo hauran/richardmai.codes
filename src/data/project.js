@@ -6,7 +6,7 @@ module.exports = [
       web:'discoverondemand.com',
     },
     description:'An on-demand music recommendation app, specically tailored to each user.',
-    story:'There wasn\'t a simple way to find new music whenever I wanted.  Yea there\'s Spotify\'s Discover Weekly, which I love, but by Wednesday, I already listened to the whole thing. So I made one.  Plus it was a great way to play with React Native.  I reused a lot of the same back end code as OurMix, so the development was pretty fast. This app is actually my go-devto for new music. Give it a shot.',
+    story:'There wasn\'t a simple way to find new music whenever I wanted.  Yea there\'s Spotify\'s Discover Weekly, which I love, but by Wednesday, I already listened to the whole thing. So I made one.  Plus it was a great way to play with React Native.  I reused a lot of the same back end code as OurMix, so the development was pretty fast. This app is actually my go-to for new music. Give it a shot.',
     release_date:'May 2016',
     stack:['React Native', 'Objective-C', 'Node.js', 'MySQL', 'Redis', 'Spotify SDK', 'Spotify API']
   },

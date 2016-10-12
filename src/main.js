@@ -24,6 +24,7 @@ const store = compose(
 
 // ROUTES
 import Portfolio from './pages/Portfolio'
+import Resume from './pages/Resume'
 
 class Root extends React.Component {
   render() {
@@ -32,6 +33,7 @@ class Root extends React.Component {
         <Provider store={store}>
           <ReduxRouter>
             <Route path="/" component={Portfolio}/>
+            <Route path="/resume" component={Resume}/>
           </ReduxRouter>
         </Provider>
       </div>

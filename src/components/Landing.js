@@ -19,13 +19,13 @@ class Landing extends React.Component {
           <div className='subtitle'>create and code</div>
           <div className='contactContiner'>
             <div className='contact'>
-              <EmailIcon size={20} color='#333333'></EmailIcon> <a href='mailTo:richardmai@gmail.com' target='_blank'>richardmai@gmail.com</a>
+              <EmailIcon size={20} color='#333333'></EmailIcon> <a href='mailTo:richardmai@gmail.com' target='_blank' className='link'>richardmai@gmail.com</a>
             </div>
             <div className='contact'>
-              <TwitterIcon size={20} color='#333333'></TwitterIcon> <a href='https://twitter.com/mai_hauran' target='_blank'>@mai_hauran</a>
+              <TwitterIcon size={20} color='#333333'></TwitterIcon> <a href='https://twitter.com/mai_hauran' target='_blank' className='link'>@mai_hauran</a>
             </div>
             <div className='contact'>
-              <PersonIcon size={20} color='#333333'></PersonIcon> <a href='http://localhost:8000' target='_blank'>resume</a>
+              <PersonIcon size={20} color='#333333'></PersonIcon> <a href='/#/resume' target='_blank' className='link'>resume</a>
             </div>
           </div>
         </div>
