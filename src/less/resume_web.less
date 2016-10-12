@@ -1,0 +1,147 @@
+@import "./mixins";
+
+
+#resume {
+  font-size: 16px;
+  font-family: 'Open sans';
+  .displayFlex;
+  .flexDirection(column);
+  width: 700px;
+  margin:0 auto;
+  padding:3em 1em;
+
+  header#main {
+    .flex1;
+    .displayFlex;
+    .flexDirection(row);
+    .name {
+      h1 {
+        .flex1;
+        margin:initial;
+        font-size: 2em;
+        text-transform: uppercase;
+        letter-spacing: 1.3px;
+        font-weight: 400;
+        font-family: 'Montserrat', sans-serif;
+      }
+      .about {
+        margin-top:20px;
+        .title {
+          font-family: 'Montserrat', sans-serif;
+          color:#666;
+        }
+        .description {
+          margin-top:10px;
+          font-size: 0.8em;
+          color:#666;
+          font-weight: 400;
+        }
+      }
+    }
+    .contact {
+      .displayFlex;
+      .flexDirection(column);
+      div {
+        a {
+          .displayFlex;
+          text-decoration:none;
+          color:inherit;
+        }
+
+        font-weight: 300;
+        font-size:0.85em;
+        i {
+          margin-right: 5px;
+          color: #999;
+          font-size: 1.3em;
+          position: relative;
+          top: -3px;
+        }
+      }
+    }
+  }
+
+  .section {
+    h2 {
+      margin-top: 50px;
+      margin-bottom: 25px;
+      color: #ccc;
+      font-size: 0.8em;
+      text-transform: uppercase;
+      font-family: 'Montserrat', sans-serif;
+      padding-top:15px;
+    }
+
+    section.main-item {
+      margin-bottom:30px;
+      padding-bottom:30px;
+      &:last-of-type {
+        margin-bottom:30px;
+      }
+      header {
+        a{
+          text-decoration: none;
+          border-bottom:1px solid rgba(0,0,0,0.08);
+        }
+        h3 {
+          font-family: 'Montserrat', sans-serif;
+          text-transform: uppercase;
+          font-size: 1.1em;
+          font-weight: 600;
+          margin:0;
+          padding:0;
+          display: inline;
+          color:#000;
+        }
+        div {
+          display: inline-block;
+          .transform(rotate(-45deg));
+          position: relative;
+          top:2px;
+          .ion-ios-arrow-thin-right {
+            color:#999;
+          }
+        }
+      }
+      .details {
+        margin-top:20px;
+        .title-dates {
+          font-family: 'Montserrat', sans-serif;
+          color:#bbb;
+          font-size: 0.9em;
+          span {
+            margin:0 10px;
+          }
+        }
+        .description {
+          line-height: 1.5em;
+        }
+      }
+      ul {
+        list-style: none;
+        padding-left:0px;
+        margin-top:0;
+       li {
+         line-height: 1.5em;
+         padding-top:12px;
+         font-weight: 200;
+         color:#333;
+         font-size: 0.9em;
+         a {
+           text-decoration: none;
+           border-bottom:1px solid rgba(0,0,0,0.1);
+           color:inherit;
+         }
+       }
+      }
+    }
+
+    &#education {
+      section.main-item {
+        .details {
+          margin-top:0;
+        }
+      }
+    }
+  }
+}
