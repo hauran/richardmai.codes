@@ -3,7 +3,7 @@ module.exports = [
     title:"Discover on Demand",
     links:{
       appstore:'https://itunes.apple.com/us/app/discover-on-demand/id1097518404?ls=1&mt=8',
-      web:'http://discoverondemand.com',
+      web:'discoverondemand.com',
     },
     description:'An on-demand music recommendation app, specically tailored to each user.',
     story:'There wasn\'t a simple way to find new music whenever I wanted.  Yea there\'s Spotify\'s Discover Weekly, which I love, but by Wednesday, I already listened to the whole thing. So I made one.  Plus it was a great way to play with React Native.  I reused a lot of the same back end code as OurMix, so the development was pretty fast. This app is actually my go-devto for new music. Give it a shot.',
@@ -12,7 +12,9 @@ module.exports = [
   },
   {
     title:'Discover on Demand',
-    links:{blah:1},
+    links:{
+      web:'discoverondemand.com/osx'
+    },
     description:'An on-demand music recommendation app, specically tailored to each user.',
     story:'Desktop app',
     release_date:'Feb 2016',

@@ -1,4 +1,7 @@
 @import "./mixins";
+* {
+  box-sizing: border-box;
+}
 
 body {
     font-size: 16px;
@@ -25,14 +28,50 @@ img {
 
 .link{
   margin-top:10px;
-  a {
-    padding:5px 3px;text-decoration: none;
-    background-color: #efefef;
-    &:hover {
-      border-bottom: 1px solid #666666;
+}
+
+button, a {
+  cursor: pointer;
+}
+
+a {
+  position: relative;
+  outline: none;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 400;
+  padding: 8px 0;
+  .transition();
+
+  &::after {
+    position: absolute;
+    top:  calc(~"100% - 7px");
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(231, 76, 60,0.8);
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+  &:hover, &:focus {
+    color:rgba(231, 76, 60,1.0);
+    &::after {
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+      -moz-transform: translateY(0px);
+      transform: translateY(0px);
     }
   }
 }
+
+
+
 
 .view-container {
   .displayFlex;

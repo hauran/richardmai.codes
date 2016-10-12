@@ -1,0 +1,57 @@
+@import "./mixins";
+
+#landing {
+  width:100vw;
+  height:100vh;
+  background-color: white;
+  .flex;;
+  .flexDirection(column);
+  .topStuff {
+    .flex1;
+    .flex;
+    .flexDirection(column);
+    .title {
+      font-family: 'Montserrat';
+      letter-spacing: 10px;
+      font-size: 1.5em;
+      text-transform: uppercase;
+    }
+    .subtitle {
+      font-family: 'Montserrat';
+      margin-top:1em;
+      font-size: 0.8em;
+      text-transform: uppercase;
+      font-weight: 100;
+      margin-bottom: 50px;
+    }
+    .contact {
+      margin-bottom:10px;
+      a {
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  button {
+    margin:30px;
+    font-family: 'Montserrat';
+    font-size: 0.9em;
+    color:white;
+    background-color: rgba(231, 76, 60,1.0);
+    border:4px double #ddd;
+    height:50px;
+    padding:0 40px;
+    -webkit-transition: background-color 0.2s;
+  	-moz-transition: background-color 0.2s;
+  	transition: background-color 0.2s;
+    -webkit-transition: color 0.2s;
+  	-moz-transition: color 0.2s;
+  	transition: color 0.2s;
+    &:hover {
+      // padding:10px 20px;
+      border:1px solid #ddd;
+      color:#666;
+      background-color: white;
+    }
+  }
+}

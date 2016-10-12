@@ -2,7 +2,7 @@ import { Router, Route, Link } from 'react-router'
 import { connect } from 'react-redux'
 import smoothScroll from 'smoothscroll'
 
-import Header from '../components/Header'
+import Landing from '../components/Landing'
 import Project from '../components/Project'
 
 import '../less/app.less'
@@ -38,7 +38,7 @@ class Portfolio extends React.Component {
       <div className='view-container'>
         <section className='content'>
           <ul>
-            <li><Header scroll={this.scrollToFirst}></Header></li>
+            <li><Landing scroll={this.scrollToFirst}></Landing></li>
             {
               this.state.projects.map( (p, i) => {
                 return (

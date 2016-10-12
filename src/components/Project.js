@@ -2,11 +2,17 @@ import '../less/app.less'
 import '../less/project.less'
 
 import ios from '../assets/appStore.svg'
-import LinkIcon from 'react-icons/io/link'
+import LinkIcon from 'react-icons/fa/external-link'
+import IosIcon from 'react-icons/io/social-apple'
 import classNames from 'classnames'
 
 const Project = (p) => {
   let project = classNames('project', p.project.fontcolor);
+  let iosLink = classNames('link', 'ios')
+  let weblink = ''
+  if(p.project.links.web)
+    weblink = `http://${p.project.links.web}`
+
   return (
     <div className={project} style={{'backgroundColor':p.project['backgroundColor']}}>
       <div className='line'></div>
@@ -23,13 +29,13 @@ const Project = (p) => {
             <div className='links'>
               {
                 p.project.links.appstore ?
-                  <div><a href={p.project.links.appstore}><div className='ios' dangerouslySetInnerHTML={{__html: ios}} /></a></div>
+                  <div className={iosLink}><IosIcon size={25} className='iosIcon'></IosIcon><a href={p.project.links.appstore} target='_blank'>AppStore</a></div>
                 :
                   null
               }
               {
                 p.project.links.web ?
-                  <div className='link'><a href={p.project.links.web}><LinkIcon size={20}></LinkIcon> {p.project.links.web}</a></div>
+                  <div className='link'><LinkIcon size={15}></LinkIcon> <a href={weblink} target='_blank'>{p.project.links.web}</a></div>
                 :
                   null
               }

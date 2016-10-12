@@ -37,7 +37,10 @@
       font-weight: 200;
     }
     .story {
-      color:#333333;
+      margin-top:1.5em;
+      color: #333333;
+      letter-spacing: 0.01em;
+      line-height: 1.7em;
     }
     .title {
       font-family: 'Montserrat';
@@ -62,7 +65,12 @@
       .displayFlex;
       .flexDirection(column);
       .ios {
-        width: 140px
+        position: relative;
+        left:-4px;
+      }
+      .iosIcon {
+        position: relative;
+        top:-3px;
       }
     }
     ul {
@@ -98,9 +106,9 @@
     .description {
       margin-bottom: 0.5em;
     }
-    .links {
-      .flex;
-    }
+    // .links {
+    //   .flex;
+    // }
     ul {
       margin-top: 15px;
     }
